@@ -1,0 +1,135 @@
+/*body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #b18e2d;
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    width: 340px;
+    margin: 30px auto;
+    padding: 18px;
+    background:#16d569;
+    border-radius:12px;
+  }
+
+input {
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    text-align: right;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.buttons button {
+    border: none;
+    border-radius:50%;
+    background:#f44515;
+    color:#fff;
+    font-size:18px;
+    cursor:pointer;
+  }
+
+button.buttons1 {
+    /* Use a different color, e.g., Yellow-Green 
+    background: #0f5699;
+    grid-column: 4;
+    grid-row: 1 / span 2;
+    border-radius: 20px;
+    height: calc(60px * 2 + 12px); 
+    align-self: start; 
+ }
+
+.equal-button {
+    /* Use the same new color 
+    background: #1128bf !important;
+    border-radius: 10px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    grid-auto-rows: 60px;
+  }
+
+.buttons button:hover {
+    background-color: #c9da13;
+}
+*/
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #555555; /* Darker gray background for the page */
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    width: 340px;
+    margin: 30px auto;
+    padding: 25px;
+    background: #444444; /* Dark gray for the calculator body */
+    border-radius: 12px;
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    text-align: right;
+    margin-bottom: 20px;
+    padding: 5px;
+    background-color: #DDDDDD; /* Light gray for the input field */
+    color: #333333; /* Darker text for input */
+    border: 1px solid #AAAAAA; /* Subtle border */
+}
+
+/* Ensure general button styles are defined first for cascade */
+.buttons button {
+    border: none;
+    border-radius: 50%; /* Keep circular shape */
+    background: #777777; /* Medium gray for most buttons */
+    color: #FFFFFF; /* White text for buttons */
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Specific styling for the 'C' button */
+button.buttons1 {
+    background: #b5e508 !important; /* Lighter gray for 'C' */
+    color: #ff0000 !important; /* Darker text for 'C' */
+    grid-column: 4;
+    grid-row: 1 / span 2;
+    height: calc(60px * 2 + 12px);
+    align-self: start;
+    border-radius: 30px; /* Rounded pill shape for 'C' */
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Specific styling for the '=' button */
+.equal-button {
+    background: #b5e508 !important; /* Lighter gray for '=' */
+    color: #d61212 !important; /* Darker text for '=' */
+    /* Assuming you removed the custom height if it was there and it's a standard button now */
+    border-radius: 50%; /* Keep circular shape for '=' if it's not spanning rows */
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    grid-auto-rows: 60px;
+}
+
+.buttons button:hover {
+    background-color: #999999; /* Slightly lighter gray on hover */
+}
