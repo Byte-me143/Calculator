@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health & Fitness Suite - BMI Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="calculator-suite-container">
+        
+        <h1>Health & Fitness Suite</h1>
+        <hr>
+
+        <div id="bmi-section" class="calculator-section">
+            <h2>Body Mass Index (BMI) Calculator</h2>
+
+            <label for="bmi-unit-system">Unit System:</label>
+            <select id="bmi-unit-system" onchange="toggleBMIUnits()">
+                <option value="metric">Metric (kg, cm)</option>
+                <option value="imperial">Imperial (lbs, ft/in)</option>
+            </select>
+            
+            <label for="weight-input">Weight:</label>
+            <div class="weight-input-group input-with-unit"> <input type="number" id="weight-input" placeholder="Enter weight in kg" value="">
+                <span id="weight-unit-label" class="unit-label">kg</span> </div>
+
+            <div id="height-metric" class="height-input-group">
+                <label for="height-cm-input">Height:</label>
+                <div class="input-with-unit"> 
+                    <input type="number" id="height-cm-input" placeholder="Enter height in cm" value="">
+                    <span class="unit-label">cm</span> 
+                </div>
+            </div>
+
+            <div id="height-imperial" class="height-input-group" style="display: none;">
+                <label>Height (Imperial):</label>
+                <div class="imperial-height-fields">
+                    <input type="number" id="height-ft-input" placeholder="Feet" value="" min="0">
+                    <span>ft</span>
+                    <input type="number" id="height-in-input" placeholder="Inches" value="" min="0" max="11">
+                    <span>in</span>
+                </div>
+            </div>
+
+            <button onclick="calculateBMI()">Calculate BMI</button> 
+            
+            <h3>Result:</h3>
+            <p id="final-result">Enter your details and calculate.</p>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>
