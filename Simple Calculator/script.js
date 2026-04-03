@@ -1,3 +1,4 @@
+// Function to append value
 function appendValue(val) {
     document.getElementById('result').value += val;
 }
@@ -23,8 +24,7 @@ function squareRoot() {
             display.value = 'Error (i)'; 
             return;
         }
-        
-        // Use Math.sqrt() to calculate the square root
+    
         let result = Math.sqrt(number);
 
         display.value = result;
@@ -37,11 +37,10 @@ function squareRoot() {
 
 function calculate() {
     try {
-        // NOTE: The 'eval' function is generally unsafe for production, 
-        // but for this simple example, it handles basic operators.
         let res = eval(document.getElementById('result').value);
         document.getElementById('result').value = res;
-    } catch {
+    }
+    catch {
         document.getElementById('result').value = 'Error';
     }
 }
