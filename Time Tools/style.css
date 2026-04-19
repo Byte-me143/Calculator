@@ -16,8 +16,8 @@ body {
     max-width: 500px; 
     background-color: white;
     border-radius: 15px; 
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Stronger shadow */
-    border-top: 8px solid #008080; /* ACCENT COLOR 1: DEEP TEAL */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); 
+    border-top: 8px solid #008080; 
 }
 
 h1 {
@@ -29,20 +29,19 @@ h1 {
 }
 
 h2 {
-    color: #008080; /* ACCENT COLOR 1 */
+    color: #008080;
     border-bottom: 1px solid #e0e0e0;
     padding-bottom: 8px;
     margin-top: 15px;
     font-size: 1.3em;
 }
 
-/* General Input Styling - Includes fixes for dropdown appearance */
 input[type="date"], 
 input[type="datetime-local"], 
 input[type="number"], 
 select {
     width: 100%;
-    padding: 14px 10px; /* Adjusted padding */
+    padding: 14px 10px; 
     margin-top: 5px;
     margin-bottom: 15px;
     border: 1px solid #ced4da; 
@@ -50,20 +49,19 @@ select {
     box-sizing: border-box;
     font-size: 1em;
     transition: border-color 0.3s;
-    
-    /* Dropdown Aesthetics Fix: Remove default styling */
+
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     background-color: #fff;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%236c757d' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e"); /* Custom arrow */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%236c757d' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e"); 
     background-repeat: no-repeat;
     background-position: right 10px top 50%;
     background-size: 8px;
 }
 
 input:focus, select:focus {
-    border-color: #008080; /* ACCENT COLOR 1 on focus */
+    border-color: #008080; 
     box-shadow: 0 0 0 0.2rem rgba(0, 128, 128, 0.25); 
     outline: none;
 }
@@ -75,12 +73,11 @@ label {
     margin-top: 10px;
 }
 
-/* Calculate Button Styling */
 button {
     width: 100%;
     padding: 16px; 
     margin-top: 20px;
-    background-color: #FF6347; /* ACCENT COLOR 2: CORAL */
+    background-color: #FF6347; 
     color: white;
     border: none;
     border-radius: 8px;
@@ -97,13 +94,12 @@ button:hover {
 #final-result {
     font-size: 1.4em;
     font-weight: 600;
-    color: #008080; /* ACCENT COLOR 1 for result text */
-    background-color: #e6f7f7; /* Very light teal background */
+    color: #008080; 
+    background-color: #e6f7f7; 
     padding: 20px;
     border-radius: 8px;
     border-left: 6px solid #008080;
     margin-top: 25px;
     white-space: pre-wrap;
 }
-/* THE FILE MUST END HERE. */
-/* If there is a "}" right after this, delete it. */
+
