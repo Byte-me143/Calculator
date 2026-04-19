@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize the application display
     showActiveFunction(); 
 });
 
-// --- UTILITY FUNCTION FOR INPUT RESET (Includes DOB fix) ---
 function resetInputsAndResult() {
   document.querySelectorAll('input, select').forEach(element => {
     if (element.id !== 'function-selector') {
@@ -19,31 +17,25 @@ function resetInputsAndResult() {
   document.getElementById('final-result').textContent = "Result will appear here.";
 }
 
-// --- 1. DYNAMIC SWITCHING LOGIC (UX Control) ---
 function showActiveFunction() {
   const selector = document.getElementById('function-selector');
   const sections = document.querySelectorAll('.calculator-section');
 
-  // Reset inputs and results when switching function
   resetInputsAndResult();
 
-  // Hide all function sections
   sections.forEach(section => {
     section.style.display = 'none';
   });
 
-  // Show the selected function's section by matching id to option value + '-section'
-  const selected = selector.value; // now directly matches section IDs like 'add-sub' or 'time-unit'
+  const selected = selector.value; 
   const activeSection = document.getElementById(selected + '-section');
   if (activeSection) {
     activeSection.style.display = 'block';
   }
 
-  // Clear the result display area
   document.getElementById('final-result').textContent = 'Result will appear here.';
 }
 
-// --- 2. MAIN CALCULATOR DISPATCHER ---
 function runCalculator() {
   const selection = document.getElementById('function-selector').value;
   let result = '';
@@ -75,10 +67,6 @@ function runCalculator() {
   document.getElementById('final-result').textContent = result;
 }
 
-
-// --- 3. FULL CALCULATION LOGIC IMPLEMENTATION ---
-
-// 1. Age Calculator Logic
 function calculateAge() {
     const dobInput = document.getElementById('dob-input').value;
     if (!dobInput) throw new Error("Please enter a Date of Birth.");
@@ -106,7 +94,6 @@ function calculateAge() {
     return `Age: ${years} years, ${months} months, ${days} days`; 
 }
 
-// 2. Date/Time Difference Logic
 function calculateDateTimeDifference() {
     const startInput = document.getElementById('start-diff-date').value;
     const endInput = document.getElementById('end-diff-date').value;
@@ -135,7 +122,6 @@ function calculateDateTimeDifference() {
     return `Difference: ${days} days, ${hours} hours, ${minutes} minutes`;
 }
 
-// 3. Date Adder/Subtracter Logic
 function calculateDateAddSubtract() {
   const startDateInput = document.getElementById('start-add-date').value;
   const operation = document.getElementById('operation-select').value;
@@ -184,7 +170,6 @@ function calculateDateAddSubtract() {
   return `Resulting date: ${date.toLocaleDateString('en-GB')}`;
 }
 
-// 4. Time Unit Converter Logic
 function calculateTimeUnitConversion() {
     const value = parseFloat(document.getElementById('unit-value').value);
     const fromUnit = document.getElementById('from-time-unit').value;
@@ -209,7 +194,6 @@ function calculateTimeUnitConversion() {
     return `${value} ${fromUnit} = ${finalResult.toFixed(4)} ${toUnit}`;
 }
 
-// 5. Weekday Finder Logic (NEW)
 function findWeekday() {
     const dateInput = document.getElementById('weekday-date').value;
     if (!dateInput) throw new Error("Please select a date.");
